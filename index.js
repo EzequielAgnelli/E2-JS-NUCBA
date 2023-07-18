@@ -5,7 +5,7 @@ const pizzas = [
     precio: 500,
     ingredientes: ["Muzzarella", "Tomate", "Aceitunas"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO
+    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
     precioNombre: function() {
       return this.nombre +  '. El precio es de: $' + this.precio
     }
@@ -17,7 +17,7 @@ const pizzas = [
     precio: 1500,
     ingredientes: ["Muzzarella", "Tomate", "Cebolla"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO
+    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
     precioNombre: function() {
       return this.nombre +  '. El precio es de: $' + this.precio
     }
@@ -29,7 +29,7 @@ const pizzas = [
     precio: 1350,
     ingredientes: ["Muzzarella", "Tomate", "Aceitunas", "Anchoas"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO
+    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO  - CONTINUA EN LINEA 99
     precioNombre: function() {
       return this.nombre +  '. El precio es de: $' + this.precio
     }
@@ -47,7 +47,7 @@ const pizzas = [
       "Roquefort",
     ],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO
+    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
 
       precioNombre: function() {
       return this.nombre +  '. El precio es de: $' + this.precio
@@ -60,7 +60,7 @@ const pizzas = [
     precio: 1000,
     ingredientes: ["Muzzarella", "Tomate", "Aceitunas", "Anchoas", "Cebolla"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO
+    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
     precioNombre: function() {
       return this.nombre +  '. El precio es de: $' + this.precio
     }
@@ -72,7 +72,7 @@ const pizzas = [
     precio: 600,
     ingredientes: ["Muzzarella", "Tomate", "Anana"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO
+    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
     precioNombre: function() {
       return this.nombre +  '. El precio es de: $' + this.precio
     }
@@ -96,7 +96,7 @@ console.log(`Si! contamos con un menu que contiene una pizza de menos de $600. Y
 console.log('--------------------------------------------------')
 
 
-// EJERCICIO B - IMPRIMIR NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO.
+// EJERCICIO C - IMPRIMIR NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO.
 console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[0].precioNombre()}.`);
 console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[1].precioNombre()}.`);
 console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[2].precioNombre()}.`);
@@ -107,7 +107,7 @@ console.log(`A continuacion, se mostrara el nombre y precio de la pizza que cont
 console.log('--------------------------------------------------')
 
 
-// EJERCICIO C - IMPRIMIR LOS INGREDIENTES DE CADA PIZZA.
+// EJERCICIO D - IMPRIMIR LOS INGREDIENTES DE CADA PIZZA.
 console.log(`La pizza de Muzarella tiene: ${pizzas[0].ingredientes}.`)
 console.log(`La pizza de Cebolla tiene: ${pizzas[1].ingredientes}.`)
 console.log(`La pizza Napolitana tiene: ${pizzas[2].ingredientes}.`)
