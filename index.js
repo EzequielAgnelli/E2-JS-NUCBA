@@ -5,10 +5,6 @@ const pizzas = [
     precio: 500,
     ingredientes: ["Muzzarella", "Tomate", "Aceitunas"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
-    precioNombre: function() {
-      return this.nombre +  '. El precio es de: $' + this.precio
-    }
   },
 
   {
@@ -17,10 +13,6 @@ const pizzas = [
     precio: 1500,
     ingredientes: ["Muzzarella", "Tomate", "Cebolla"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
-    precioNombre: function() {
-      return this.nombre +  '. El precio es de: $' + this.precio
-    }
   },
 
   {
@@ -29,10 +21,6 @@ const pizzas = [
     precio: 1350,
     ingredientes: ["Muzzarella", "Tomate", "Aceitunas", "Anchoas"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO  - CONTINUA EN LINEA 99
-    precioNombre: function() {
-      return this.nombre +  '. El precio es de: $' + this.precio
-    }
   },
 
   {
@@ -47,11 +35,6 @@ const pizzas = [
       "Roquefort",
     ],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
-
-      precioNombre: function() {
-      return this.nombre +  '. El precio es de: $' + this.precio
-    }
   },
 
   {
@@ -60,10 +43,6 @@ const pizzas = [
     precio: 1000,
     ingredientes: ["Muzzarella", "Tomate", "Aceitunas", "Anchoas", "Cebolla"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
-    precioNombre: function() {
-      return this.nombre +  '. El precio es de: $' + this.precio
-    }
   },
 
   {
@@ -72,45 +51,50 @@ const pizzas = [
     precio: 600,
     ingredientes: ["Muzzarella", "Tomate", "Anana"],
 
-    // EJERCICIO C - NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO - CONTINUA EN LINEA 99
-    precioNombre: function() {
-      return this.nombre +  '. El precio es de: $' + this.precio
-    }
   },
 ];
 
 
 // EJERCICIO A - IMPRIMIENDO LAS PIZZAS QUE TIENEN UN ID IMPAR. 
-console.log(`El nombre de la pizza de este menu es: ${pizzas[0].nombre}`)
-console.log(`El nombre de la pizza de este menu es: ${pizzas[2].nombre}`)
-console.log(`El nombre de la pizza de este menu es: ${pizzas[4].nombre}`)
+const pizzasImpares = pizzas.filter((pizzas) => {
+  return pizzas.id % 2 === 1;
+})
+
+pizzasImpares.forEach((pizzas) => {
+  const {nombre} = pizzas;
+  console.log(`Las pizzas son: ${nombre}.`)
+})
+
 
 console.log('--------------------------------------------------')
-
-
 // EJERCICIO B - ¿HAY ALGUNA PIZZA QUE VALGA MENOS DE $600?
-console.log(`Si! contamos con un menu que contiene una pizza de menos de $600. Y es la ${pizzas[0].nombre}`)
+const filtrarPizzas = pizzas.filter((pizza) => pizza.precio < 600);
 
+filtrarPizzas.forEach((pizza) => {
+  const pizzaFiltrada = `Contamos con una Pizza que sale menos de $600. Esta es: ${pizza.nombre}, Y el precio es de $${pizza.precio}.`
+  console.log(pizzaFiltrada)
+})
 
 
 console.log('--------------------------------------------------')
-
-
 // EJERCICIO C - IMPRIMIR NOMBRE DE CADA PIZZA CON SU RESPECTIVO PRECIO.
-console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[0].precioNombre()}.`);
-console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[1].precioNombre()}.`);
-console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[2].precioNombre()}.`);
-console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[3].precioNombre()}.`);
-console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[4].precioNombre()}.`);
-console.log(`A continuacion, se mostrara el nombre y precio de la pizza que contiene este menu: ${pizzas[5].precioNombre()}.`);
+const pizzasConSusPrecios = pizzas.map((pizzas) => {
+  return {
+    ...pizzas, precio: pizzas.precio  
+  }
+});
+pizzasConSusPrecios.forEach((pizzas) => {
+  console.log(`Las pizzas con las que contamos son ${pizzas.nombre} y el precio de esta es de: $${pizzas.precio}.`)
+});
+
 
 console.log('--------------------------------------------------')
-
-
 // EJERCICIO D - IMPRIMIR LOS INGREDIENTES DE CADA PIZZA.
-console.log(`La pizza de Muzarella tiene: ${pizzas[0].ingredientes}.`)
-console.log(`La pizza de Cebolla tiene: ${pizzas[1].ingredientes}.`)
-console.log(`La pizza Napolitana tiene: ${pizzas[2].ingredientes}.`)
-console.log(`La pizza de 4 Quesos tiene: ${pizzas[3].ingredientes}.`)
-console.log(`La pizza ESPECIAL tiene: ${pizzas[4].ingredientes}.`)
-console.log(`La pizza con Anana tiene: ${pizzas[5].ingredientes}.`)
+const ingredientesPizzas = pizzas.map((pizzas) => {
+  return {
+    ...pizzas, ingredientes: pizzas.ingredientes
+  }
+})
+  ingredientesPizzas.forEach((pizzas) => {
+    console.log(`La siguiente pizza: ${pizzas.nombre}. Contiene los siguientes ingredientes: ${pizzas.ingredientes}.`)
+})
